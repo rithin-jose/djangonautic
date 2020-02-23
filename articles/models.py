@@ -8,3 +8,5 @@ class Article(models.Model):
     slug = models.SlugField()
     def __str__(self):
         return self.title
+    def snippet(self):
+        return self.body[:50]+"..."
